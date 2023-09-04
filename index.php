@@ -90,27 +90,20 @@ $uang = $jumlahmasuk - $jumlahkeluar;
             <div class="row">
                 <!-- DataTales Example -->
                 <img src='img/tp.png' width='90%' />
-                <div class="col-xl-8 col-lg-7">
+                <div class="col-xl-8 col-lg-7 d-flex justify-content-between">
 
                     <a href="pendapatan.php"><button type="submit" class="btn btn-success"
-                            style="border-radius: 10px; margin-top:20px; margin-left:70px"><i class="fa fa">
-                                Pemasukan</i></button><br>
-                        <!-- /.container-fluid -->
+                            style="border-radius: 10px; "><i class="fa fa">
+                                Pemasukan</i></button>
+                        <a href="pengeluaran.php"><button type="submit" class="btn btn-success"
+                                style="border-radius: 10px; "><i class="fa fa">
+                                    Pengeluaran</i></button>
+                            <a href="laporan.php"><button type="submit" class="btn btn-success"
+                                    style="border-radius: 10px; "><i class="fa fa">
+                                        Laporan</i></button>
+                                <!-- /.container-fluid -->
                 </div>
-                <div class="col-xl-8 col-lg-7">
-                    <a href="pengeluaran.php"><button type="submit" class="btn btn-success"
-                            style="border-radius: 10px; margin-top:-65px; margin-left:220px "><i class="fa fa">
-                                Pengeluaran</i></button><br>
-                        <!-- /.container-fluid -->
-                </div>
-                <div class="col-xl-8 col-lg-7">
-                    <a href="laporan.php"><button type="submit" class="btn btn-success"
-                            style="border-radius: 10px; margin-top:-114px; margin-left:380px"><i class="fa fa">
-                                Laporan</i></button><br>
 
-                        <!-- /.container-fluid -->
-                </div>
-                <!-- End of Main Content -->
 
 
                 <?php require 'footer.php'?>
