@@ -26,26 +26,15 @@ require 'cek-sesi.php';
 </head>
 
 <body id="page-top">
-    <?php 
-require 'koneksi.php';
-require ('sidebar.php'); ?>
+    <?php
+    require 'koneksi.php';
+    require('sidebar.php'); ?>
     <!-- Main Content -->
     <div id="content">
 
-        <?php require ('navbar.php'); ?>
-
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-            <!-- Content Row -->
-            <div class="row">
-
-                <!-- Content Column -->
-                <div class="col-lg-6 mb-4">
+        <?php require('navbar.php'); ?>
 
 
-                </div>
-            </div>
-        </div>
 
         <!-- DataTales Example -->
         <div class="col-xl-8 col-lg-7">
@@ -86,21 +75,20 @@ require ('sidebar.php'); ?>
                                 </tr>
                             </tfoot>
                             <tbody>
-                                <?php 
-$query = mysqli_query($koneksi,"SELECT * FROM pemasukan");
-$no = 1;
-while ($data = mysqli_fetch_assoc($query)) 
-{
-?>
+                                <?php
+                                $query = mysqli_query($koneksi, "SELECT * FROM pemasukan");
+                                $no = 1;
+                                while ($data = mysqli_fetch_assoc($query)) {
+                                ?>
                                 <tr>
-                                    <td><?=$data['id_pemasukan']?></td>
-                                    <td><?=$data['tgl_pemasukan']?></td>
-                                    <td><?=$data['jenis_barang']?></td>
-                                    <td><?=$data['ukuran']?></td>
-                                    <td><?=$data['jumlah']?></td>
-                                    <td>Rp. <?=number_format($data['hrg_satuan'],2,',','.');?></td>
-                                    <td>Rp. <?=number_format($data['jml_total'],2,',','.');?></td>
-                                    <td><?=$data['ket']?></td>
+                                    <td><?= $data['id_pemasukan'] ?></td>
+                                    <td><?= $data['tgl_pemasukan'] ?></td>
+                                    <td><?= $data['jenis_barang'] ?></td>
+                                    <td><?= $data['ukuran'] ?></td>
+                                    <td><?= $data['jumlah'] ?></td>
+                                    <td>Rp. <?= number_format($data['hrg_satuan'], 2, ',', '.'); ?></td>
+                                    <td>Rp. <?= number_format($data['jml_total'], 2, ',', '.'); ?></td>
+                                    <td><?= $data['ket'] ?></td>
                                     <td>
                                         <!-- Button untuk modal -->
                                         <a href="#" type="button" class=" fa fa-edit btn btn-primary btn-md"
@@ -123,11 +111,11 @@ while ($data = mysqli_fetch_assoc($query))
                                                 <form role="form" action="proses-edit-pemasukan.php" method="get">
 
                                                     <?php
-$id = $data['id_pemasukan']; 
-$query_edit = mysqli_query($koneksi,"SELECT * FROM pemasukan WHERE id_pemasukan='$id'");
-//$result = mysqli_query($conn, $query);
-while ($row = mysqli_fetch_array($query_edit)) {  
-?>
+                                                        $id = $data['id_pemasukan'];
+                                                        $query_edit = mysqli_query($koneksi, "SELECT * FROM pemasukan WHERE id_pemasukan='$id'");
+                                                        //$result = mysqli_query($conn, $query);
+                                                        while ($row = mysqli_fetch_array($query_edit)) {
+                                                        ?>
 
 
                                                     <input type="hidden" name="id_pemasukan"
@@ -183,16 +171,16 @@ while ($row = mysqli_fetch_array($query_edit)) {
 
                                                     <div class="modal-footer">
                                                         <button type="submit" class="btn btn-success">Ubah</button>
-                                                        <a href="hapus-pemasukan.php?id_pemasukan=<?=$row['id_pemasukan'];?>"
+                                                        <a href="hapus-pemasukan.php?id_pemasukan=<?= $row['id_pemasukan']; ?>"
                                                             Onclick="confirm('Anda Yakin Ingin Menghapus?')"
                                                             class="btn btn-danger">Hapus</a>
                                                         <button type="button" class="btn btn-default"
                                                             data-dismiss="modal">Keluar</button>
                                                     </div>
-                                                    <?php 
-}
-//mysql_close($host);
-?>
+                                                    <?php
+                                                        }
+                                                        //mysql_close($host);
+                                                        ?>
 
                                                 </form>
                                             </div>
@@ -200,8 +188,6 @@ while ($row = mysqli_fetch_array($query_edit)) {
 
                                     </div>
                                 </div>
-
-
 
                                 <!-- Modal -->
                                 <div id="myModalTambah" class="modal fade" role="dialog">
@@ -248,9 +234,9 @@ while ($row = mysqli_fetch_array($query_edit)) {
 
 
 
-                    <?php               
-} 
-?>
+                    <?php
+                                }
+                ?>
                     </tbody>
                     </table>
                 </div>
@@ -258,14 +244,12 @@ while ($row = mysqli_fetch_array($query_edit)) {
         </div>
     </div>
 
-
-    </div>
     <!-- /.container-fluid -->
 
     </div>
     <!-- End of Main Content -->
 
-    <?php require 'footer.php'?>
+    <?php require 'footer.php' ?>
 
     </div>
     <!-- End of Content Wrapper -->
@@ -279,7 +263,7 @@ while ($row = mysqli_fetch_array($query_edit)) {
     </a>
 
     <!-- Logout Modal-->
-    <?php require 'logout-modal.php';?>
+    <?php require 'logout-modal.php'; ?>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
