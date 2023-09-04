@@ -37,7 +37,7 @@ require 'cek-sesi.php';
 
 
         <!-- DataTales Example -->
-        <div class="col-xl-8 col-lg-7">
+        <div class="col-sm-12">
             <button type="button" class="btn btn-success" style="margin:5px" data-toggle="modal"
                 data-target="#myModalTambah"><i class="fa fa-plus"> Pemasukan</i></button><br>
 
@@ -47,31 +47,31 @@ require 'cek-sesi.php';
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="1">
                             <thead>
                                 <tr>
-                                    <th>ID Pemasukan</th>
-                                    <th>Tanggal</th>
-                                    <th>Jenis Barang</th>
-                                    <th>Ukuran</th>
-                                    <th>Jumlah</th>
-                                    <th>Harga Satuan</th>
-                                    <th>Jumlah Total</th>
-                                    <th>Keterangan</th>
-                                    <th>Aksi</th>
+                                    <th class="" style="font-size:10pt">ID</th>
+                                    <th class="" style="font-size:10pt">Tanggal</th>
+                                    <th class="" style="font-size:10pt">Jenis Barang</th>
+                                    <th class="" style="font-size:10pt">Ukuran</th>
+                                    <th class="" style="font-size:10pt">Jumlah</th>
+                                    <th class="" style="font-size:10pt">Harga Satuan</th>
+                                    <th class="" style="font-size:10pt">Jumlah Total</th>
+                                    <th class="" style="font-size:10pt">Keterangan</th>
+                                    <th class="" style="font-size:10pt">Aksi</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                    <th>ID Pemasukan</th>
-                                    <th>Tanggal</th>
-                                    <th>Jenis Barang</th>
-                                    <th>Ukuran</th>
-                                    <th>Jumlah</th>
-                                    <th>Harga Satuan</th>
-                                    <th>Jumlah Total</th>
-                                    <th>Keterangan</th>
-                                    <th>Aksi</th>
+                                    <th class="" style="font-size:10pt">ID</th>
+                                    <th class="" style="font-size:10pt">Tanggal</th>
+                                    <th class="" style="font-size:10pt">Jenis Barang</th>
+                                    <th class="" style="font-size:10pt">Ukuran</th>
+                                    <th class="" style="font-size:10pt">Jumlah</th>
+                                    <th class="" style="font-size:10pt">Harga Satuan</th>
+                                    <th class="" style="font-size:10pt">Jumlah Total</th>
+                                    <th class="" style="font-size:10pt">Keterangan</th>
+                                    <th class="" style="font-size:10pt">Aksi</th>
                                 </tr>
                             </tfoot>
                             <tbody>
@@ -81,15 +81,17 @@ require 'cek-sesi.php';
                                 while ($data = mysqli_fetch_assoc($query)) {
                                 ?>
                                 <tr>
-                                    <td><?= $data['id_pemasukan'] ?></td>
-                                    <td><?= $data['tgl_pemasukan'] ?></td>
-                                    <td><?= $data['jenis_barang'] ?></td>
-                                    <td><?= $data['ukuran'] ?></td>
-                                    <td><?= $data['jumlah'] ?></td>
-                                    <td>Rp. <?= number_format($data['hrg_satuan'], 2, ',', '.'); ?></td>
-                                    <td>Rp. <?= number_format($data['jml_total'], 2, ',', '.'); ?></td>
-                                    <td><?= $data['ket'] ?></td>
-                                    <td>
+                                    <td class="" style="font-size:10pt"><?= $data['id_pemasukan'] ?></td>
+                                    <td class="" style="font-size:10pt"><?= $data['tgl_pemasukan'] ?></td>
+                                    <td class="" style="font-size:10pt"><?= $data['jenis_barang'] ?></td>
+                                    <td class="" style="font-size:10pt"><?= $data['ukuran'] ?></td>
+                                    <td class="" style="font-size:10pt"><?= $data['jumlah'] ?></td>
+                                    <td class="" style="font-size:10pt">Rp.
+                                        <?= number_format($data['hrg_satuan'], 2, ',', '.'); ?></td>
+                                    <td class="" style="font-size:10pt">Rp.
+                                        <?= number_format($data['jml_total'], 2, ',', '.'); ?></td>
+                                    <td class="" style="font-size:10pt"><?= $data['ket'] ?></td>
+                                    <td class="" style="font-size:10pt">
                                         <!-- Button untuk modal -->
                                         <a href="#" type="button" class=" fa fa-edit btn btn-primary btn-md"
                                             data-toggle="modal"

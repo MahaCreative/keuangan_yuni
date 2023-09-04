@@ -70,18 +70,18 @@ $tujuhhari= mysqli_fetch_array($tujuhhari);
         <?php require ('navbar.php');?>
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="">
             <!-- Content Row -->
             <div class="row">
 
                 <!-- Content Column -->
-                <div class="col-lg-6 mb-4">
+                <div class="col-sm-12 col-lg-6 mb-4">
 
                     <button type="button" class="btn btn-success" style="margin:5px" data-toggle="modal"
                         data-target="#myModalTambah"><i class="fa fa-plus"> Pengeluaran</i></button><br>
                     <!-- DataTales Example -->
                     <div class="row">
-                        <div class="col-xl-8 col-lg-7">
+                        <div class="col-xl-12 col-xl-8 col-lg-7">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Transaksi Keluar</h6>
@@ -91,24 +91,24 @@ $tujuhhari= mysqli_fetch_array($tujuhhari);
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <thead>
                                                 <tr>
-                                                    <th>ID Pengeluaran</th>
-                                                    <th>Tanggal</th>
-                                                    <th>Jenis Pengeluaran</th>
-                                                    <th>Jumlah</th>
-                                                    <th>Harga Satuan</th>
-                                                    <th>Total Pengeluaran</th>
-                                                    <th>Aksi</th>
+                                                    <th style="font-size:10pt">ID</th>
+                                                    <th style="font-size:10pt">Tanggal</th>
+                                                    <th style="font-size:10pt">Jenis Pengeluaran</th>
+                                                    <th style="font-size:10pt">Jumlah</th>
+                                                    <th style="font-size:10pt">Harga Satuan</th>
+                                                    <th style="font-size:10pt">Total Pengeluaran</th>
+                                                    <th style="font-size:10pt">Aksi</th>
                                                 </tr>
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                    <th>ID Pengeluaran</th>
-                                                    <th>Tanggal</th>
-                                                    <th>Jenis Pengeluaran</th>
-                                                    <th>Jumlah</th>
-                                                    <th>Harga Satuan</th>
-                                                    <th>Total Pengeluaran</th>
-                                                    <th>Aksi</th>
+                                                    <th style="font-size:10pt">ID</th>
+                                                    <th style="font-size:10pt">Tanggal</th>
+                                                    <th style="font-size:10pt">Jenis Pengeluaran</th>
+                                                    <th style="font-size:10pt">Jumlah</th>
+                                                    <th style="font-size:10pt">Harga Satuan</th>
+                                                    <th style="font-size:10pt">Total Pengeluaran</th>
+                                                    <th style="font-size:10pt">Aksi</th>
                                                 </tr>
                                             </tfoot>
                                             <tbody>
@@ -119,13 +119,15 @@ while ($data = mysqli_fetch_assoc($query))
 {
 ?>
                                                 <tr>
-                                                    <td><?=$data['id_pengeluaran']?></td>
-                                                    <td><?=$data['tgl_pengeluaran']?></td>
-                                                    <td><?=$data['jns_pengeluaran']?></td>
-                                                    <td><?=$data['jumlah']?></td>
-                                                    <td>Rp. <?=number_format($data['hrg_satuan'],2,',','.');?></td>
-                                                    <td>Rp. <?=number_format($data['ttl_pengeluaran'],2,',','.');?></td>
-                                                    <td>
+                                                    <td style="font-size:10pt"><?=$data['id_pengeluaran']?></td>
+                                                    <td style="font-size:10pt"><?=$data['tgl_pengeluaran']?></td>
+                                                    <td style="font-size:10pt"><?=$data['jns_pengeluaran']?></td>
+                                                    <td style="font-size:10pt"><?=$data['jumlah']?></td>
+                                                    <td style="font-size:10pt">Rp.
+                                                        <?=number_format($data['hrg_satuan'],2,',','.');?></td>
+                                                    <td style="font-size:10pt">Rp.
+                                                        <?=number_format($data['ttl_pengeluaran'],2,',','.');?></td>
+                                                    <td style="font-size:10pt">
                                                         <!-- Button untuk modal -->
                                                         <a href="#" type="button"
                                                             class=" fa fa-edit btn btn-primary btn-md"

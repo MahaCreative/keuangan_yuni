@@ -36,7 +36,7 @@ require 'sidebar.php'; ?>
         <?php require 'navbar.php'; ?>
 
         <!-- Begin Page Content -->
-        <div class="container-fluid">
+        <div class="">
 
             <!-- DataTales Example -->
             <div class="card shadow mb-4">
@@ -48,10 +48,10 @@ require 'sidebar.php'; ?>
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Nama</th>
-                                    <th>Jumlah Transaksi </th>
-                                    <th>Jumlah Total Uang</th>
-                                    <th>Download</th>
+                                    <th style="font-size:10pt">Nama</th>
+                                    <th style="font-size:10pt">Jumlah Transaksi </th>
+                                    <th style="font-size:10pt">Jumlah Total Uang</th>
+                                    <th style="font-size:10pt">Download</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -79,10 +79,10 @@ $query2 = mysqli_num_rows($query2);
 $no = 1;
 ?>
                                 <tr>
-                                    <td>Pemasukan</td>
-                                    <td><?=$query1?></td>
-                                    <td>Rp. <?=number_format($jumlahmasuk,2,',','.');?></td>
-                                    <td>
+                                    <td style="font-size:10pt">Pemasukan</td>
+                                    <td style="font-size:10pt"><?=$query1?></td>
+                                    <td style="font-size:10pt">Rp. <?=number_format($jumlahmasuk,2,',','.');?></td>
+                                    <td style="font-size:10pt">
                                         <!-- Button untuk modal -->
                                         <a href="#" type="button" class="btn btn-primary btn-md" data-toggle="modal"
                                             data-target="#modalCetakPemasukan"><i class="fa fa-download"></i></a>
