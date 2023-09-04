@@ -16,14 +16,14 @@
                   <div class="flex">
                       <a href="export-pengeluaran.php" class="btn btn-success" id="btnSemuaLaporan" type="button">Semua
                           Laporan</a>
-                      <button class="btn btn-primary" id="berdasarkanTahun" type="button">Berdasarkan
+                      <button class="btn btn-primary" id="berdasarkanTahun_Pengeluaran" type="button">Berdasarkan
                           Tahun</button>
-                      <button class="btn btn-warning " id="berdasarkanBulan" type="button">Berdasarkan
+                      <button class="btn btn-warning" id="berdasarkanBulan_Pengeluaran" type="button">Berdasarkan
                           Bulan</button>
                   </div>
                   <!-- Form Bulan -->
-                  <form name="form_bulan" onsubmit="return validateFormBulan()" action="export-pengeluaran-bulan.php"
-                      id="form_bulan" method="post">
+                  <form name="form_bulan_Pengeluaran" action="export-pengeluaran-bulan.php" id="form_bulan_Pengeluaran"
+                      method="post">
                       <div class="form-group">
                           <label>Dari tanggal</label>
                           <input type="date" name="dari_tanggal" class="form-control" value="">
@@ -34,8 +34,8 @@
                       </div>
                       <button class="btn btn-primary">Download</button>
                   </form>
-                  <form name="form_tahun" onsubmit="return validateFormTahun()" action="export-pengeluaran-tahun.php"
-                      id="form_tahun" method="post">
+                  <form name="form_tahun_Pengeluaran" onsubmit="return validateFormTahun()"
+                      action="export-pengeluaran-tahun.php" id="form_tahun_Pengeluaran" method="post">
                       <div class="form-group">
                           <label>Cetak Tahun</label>
                           <input type="number" min="2010" max="2050" name="tahun" class="form-control" value="">
@@ -59,10 +59,10 @@
   <script>
 // Ambil elemen-elemen tombol dan form
 var btnSemuaLaporan = document.getElementById('btnSemuaLaporan');
-var berdasarkanTahun = document.getElementById('berdasarkanTahun');
-var berdasarkanBulan = document.getElementById('berdasarkanBulan');
-var formBulan = document.getElementById('form_bulan');
-var formTahun = document.getElementById('form_tahun');
+var berdasarkanTahun = document.getElementById('berdasarkanTahun_Pengeluaran');
+var berdasarkanBulan = document.getElementById('berdasarkanBulan_Pengeluaran');
+var formBulan = document.getElementById('form_bulan_Pengeluaran');
+var formTahun = document.getElementById('form_tahun_Pengeluaran');
 formBulan.style.display = 'none';
 formTahun.style.display = 'none';
 // Ketika tombol "Berdasarkan Tahun" diklik
@@ -87,7 +87,7 @@ btnSemuaLaporan.addEventListener('click', function() {
 });
 
 function validateFormTahun() {
-    var tahun = document.forms["form_tahun"]["tahun"].value;
+    var tahun = document.forms["form_tahun_Pengeluaran"]["tahun"].value;
 
     if (tahun == "") {
         alert("Tahun tidak boleh kosong");

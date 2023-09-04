@@ -84,8 +84,9 @@ $no = 1;
                                     <td style="font-size:10pt">Rp. <?=number_format($jumlahmasuk,2,',','.');?></td>
                                     <td style="font-size:10pt">
                                         <!-- Button untuk modal -->
-                                        <a href="#" type="button" class="btn btn-primary btn-md" data-toggle="modal"
-                                            data-target="#modalCetakPemasukan"><i class="fa fa-download"></i></a>
+                                        <button href="#" type="button" class="btn btn-primary btn-md"
+                                            data-toggle="modal" data-target="#modalCetakPemasukan"><i
+                                                class="fa fa-download"></i></button>
                                     </td>
                                 </tr>
 
@@ -95,8 +96,9 @@ $no = 1;
                                     <td>Rp. <?=number_format($jumlahkeluar,2,',','.');?></td>
                                     <td>
                                         <!-- Button untuk modal -->
-                                        <a href="#" type="button" class="btn btn-primary btn-md" data-toggle="modal"
-                                            data-target="#modalCetakPengeluaran"><i class="fa fa-download"></i></a>
+                                        <button href="#" type="button" class="btn btn-primary btn-md"
+                                            data-toggle="modal" data-target="#modalCetakPengeluaran"><i
+                                                class="fa fa-download"></i></button>
                                     </td>
                                 </tr>
 
