@@ -54,5 +54,5 @@ $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('Data_Pengeluaran_Tahun_' . $tahun . '.pdf', 'I');
+$pdf->Output('/home/u676389388/domains/pcippnu.com/Data_Pengeluaran_Tahun_' . $tahun . '.pdf', 'F');
 ?>
