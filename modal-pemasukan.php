@@ -24,7 +24,7 @@
                   </div>
                   <!-- Form Bulan -->
                   <form name="form_bulan_pemasukan" onsubmit="return validateFormBulan()"
-                      action="export-pemasukan-bulan.php" id="form_bulan_pemasukan" method="post">
+                      action="export-pemasukan-bulan.php" id="form_bulan_pemasukan" method="get">
                       <div class="form-group">
                           <label>Dari tanggal</label>
                           <input type="date" name="dari_tanggal" class="form-control" value="">
@@ -36,7 +36,7 @@
                       <button class="btn btn-primary">Download</button>
                   </form>
                   <form name="form_tahun_pemasukan" onsubmit="return validateFormTahun()"
-                      action="export-pemasukan-tahun.php" id="form_tahun_pemasukan" method="post">
+                      action="export-pemasukan-tahun.php" id="form_tahun_pemasukan" method="get">
                       <div class="form-group">
                           <label>Cetak Tahun</label>
                           <input type="number" min="2010" max="2050" name="tahun" class="form-control" value="">

@@ -82,7 +82,7 @@ $uang = $jumlahmasuk - $jumlahkeluar;
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center  mb-4">
                 <p class="mb-0 text-gray-800 mx-3">Dashboard</p>
-                <a href="export-semua.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                <a href="export_semua_pdf.php" class=" d-inline-block btn btn-sm btn-primary shadow-sm"><i
                         class="fas fa-download fa-sm text-white-50"></i> Download Laporan</a>
             </div>
 

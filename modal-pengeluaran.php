@@ -23,7 +23,7 @@
                   </div>
                   <!-- Form Bulan -->
                   <form name="form_bulan_Pengeluaran" action="export-pengeluaran-bulan.php" id="form_bulan_Pengeluaran"
-                      method="post">
+                      method="get">
                       <div class="form-group">
                           <label>Dari tanggal</label>
                           <input type="date" name="dari_tanggal" class="form-control" value="">
@@ -35,7 +35,7 @@
                       <button class="btn btn-primary">Download</button>
                   </form>
                   <form name="form_tahun_Pengeluaran" onsubmit="return validateFormTahun()"
-                      action="export-pengeluaran-tahun.php" id="form_tahun_Pengeluaran" method="post">
+                      action="export-pengeluaran-tahun.php" id="form_tahun_Pengeluaran" method="get">
                       <div class="form-group">
                           <label>Cetak Tahun</label>
                           <input type="number" min="2010" max="2050" name="tahun" class="form-control" value="">
@@ -58,32 +58,32 @@
 
   <script>
 // Ambil elemen-elemen tombol dan form
-var btnSemuaLaporan = document.getElementById('btnSemuaLaporan');
-var berdasarkanTahun = document.getElementById('berdasarkanTahun_Pengeluaran');
-var berdasarkanBulan = document.getElementById('berdasarkanBulan_Pengeluaran');
-var formBulan = document.getElementById('form_bulan_Pengeluaran');
-var formTahun = document.getElementById('form_tahun_Pengeluaran');
-formBulan.style.display = 'none';
-formTahun.style.display = 'none';
+var btnSemuaLaporan_Pengeluaran = document.getElementById('btnSemuaLaporan');
+var berdasarkanTahun_Pengeluaran = document.getElementById('berdasarkanTahun_Pengeluaran');
+var berdasarkanBulan_Pengeluaran = document.getElementById('berdasarkanBulan_Pengeluaran');
+var formBulan_Pengeluaran = document.getElementById('form_bulan_Pengeluaran');
+var formTahun_Pengeluaran = document.getElementById('form_tahun_Pengeluaran');
+formBulan_Pengeluaran.style.display = 'none';
+formTahun_Pengeluaran.style.display = 'none';
 // Ketika tombol "Berdasarkan Tahun" diklik
-berdasarkanTahun.addEventListener('click', function() {
+berdasarkanTahun_Pengeluaran.addEventListener('click', function() {
     // Tampilkan form berdasarkan tahun dan sembunyikan form berdasarkan bulan
-    formTahun.style.display = 'block';
-    formBulan.style.display = 'none';
+    formTahun_Pengeluaran.style.display = 'block';
+    formBulan_Pengeluaran.style.display = 'none';
 });
 
 // Ketika tombol "Berdasarkan Bulan" diklik
-berdasarkanBulan.addEventListener('click', function() {
+berdasarkanBulan_Pengeluaran.addEventListener('click', function() {
     // Tampilkan form berdasarkan bulan dan sembunyikan form berdasarkan tahun
-    formTahun.style.display = 'none';
-    formBulan.style.display = 'block';
+    formTahun_Pengeluaran.style.display = 'none';
+    formBulan_Pengeluaran.style.display = 'block';
 });
 
 // Ketika tombol "Semua Laporan" diklik
-btnSemuaLaporan.addEventListener('click', function() {
+btnSemuaLaporan_Pengeluaran.addEventListener('click', function() {
     // Sembunyikan kedua form
-    formTahun.style.display = 'none';
-    formBulan.style.display = 'none';
+    formTahun_Pengeluaran.style.display = 'none';
+    formBulan_Pengeluaran.style.display = 'none';
 });
 
 function validateFormTahun() {
