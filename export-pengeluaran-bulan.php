@@ -53,7 +53,7 @@ $html .= '</table>';
 
 // Output HTML as PDF content
 $pdf->writeHTML($html, true, false, true, false, '');
-$filePath = '/home/u676389388/domains/pcippnu.com/yuni/Data_Pengeluaran_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf';
+$filePath = '/home/u676389388/domains/pcippnu.com/public_html/yuni/Data_Pengeluaran_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf';
 // Close and output PDF
 $pdf->Output($filePath, 'FI');
 // echo '<script>window.location.href = "Data_Pengeluaran_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf";</script>';
