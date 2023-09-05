@@ -5,6 +5,7 @@ require_once('tcpdf/tcpdf.php');
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 $dariTanggal = empty($_GET["dari_tanggal"]) ? date("Y-m-01") : $_GET["dari_tanggal"];
 $sampaiTanggal = empty($_GET["sampai_tanggal"]) ? date("Y-m-31") : $_GET["sampai_tanggal"];
+$fileName = 'Data_Pemasukan_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf';
 // Set document information
 $pdf->SetCreator('Your Name');
 $pdf->SetAuthor('Your Name');
@@ -59,5 +60,7 @@ $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('/home/u676389388/domains/pcippnu.com/public_html/yuni/Data_Pemasukan_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf', 'FI');
+$pdf->Output('/home/u676389388/domains/pcippnu.com/public_html/yuni/Data_Pemasukan_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf', 'F');
+header("Location: /yuni/$fileName");
+exit; // Ensure script execution stops here
 ?>
