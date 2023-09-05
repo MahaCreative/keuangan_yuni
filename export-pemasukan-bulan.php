@@ -61,6 +61,6 @@ $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
 $pdf->Output('/home/u676389388/domains/pcippnu.com/public_html/yuni/Data_Pemasukan_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf', 'F');
-header("Location: /yuni/$fileName");
+header("Location: /$fileName");
 exit; // Ensure script execution stops here
 ?>
