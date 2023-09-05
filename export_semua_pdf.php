@@ -84,5 +84,5 @@ $htmlPengeluaran .= '</table>';
 $pdf->writeHTML($htmlPemasukan . $htmlPengeluaran, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('Data_Pemasukan_Pengeluaran.pdf', 'D');
+$pdf->Output('Data_Pemasukan_Pengeluaran.pdf', 'I');
 ?>

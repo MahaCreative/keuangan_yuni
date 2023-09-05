@@ -55,5 +55,5 @@ $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('Data_Pengeluaran_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf', 'D');
+$pdf->Output('Data_Pengeluaran_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf', 'I');
 ?>

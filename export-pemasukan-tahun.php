@@ -58,5 +58,5 @@ $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('Data_Pemasukan_Tahun_' . $tahun . '.pdf', 'D');
+$pdf->Output('Data_Pemasukan_Tahun_' . $tahun . '.pdf', 'I');
 ?>

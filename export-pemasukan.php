@@ -59,5 +59,5 @@ $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('Data_Pemasukan.pdf', 'D');
+$pdf->Output('Data_Pemasukan.pdf', 'I');
 ?>
