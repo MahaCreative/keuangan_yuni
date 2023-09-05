@@ -59,5 +59,5 @@ $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('/home/u676389388/domains/pcippnu.com/Data_Pemasukan.pdf', 'FI');
+$pdf->Output('/home/u676389388/domains/pcippnu.com/yuni/Data_Pemasukan.pdf', 'FI');
 ?>
