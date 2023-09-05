@@ -60,7 +60,7 @@ $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('/home/u676389388/domains/pcippnu.com/public_html/yuni/Data_Pemasukan_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf', 'F');
+$pdf->Output('/home/u676389388/domains/pcippnu.com/keuangan_yuni/Data_Pemasukan_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf', 'F');
 header("Location: /$fileName");
 exit; // Ensure script execution stops here
 ?>
