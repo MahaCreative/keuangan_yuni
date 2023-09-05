@@ -59,5 +59,5 @@ $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('/home/u676389388/domains/pcippnu.com/Data_Pemasukan_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf', 'F');
+$pdf->Output('/home/u676389388/domains/pcippnu.com/Data_Pemasukan_Tanggal_' . $dariTanggal . '_sampai_tanggal_' . $sampaiTanggal . '.pdf', 'FI');
 ?>

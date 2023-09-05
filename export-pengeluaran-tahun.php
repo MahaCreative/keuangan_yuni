@@ -56,7 +56,7 @@ $pdf->writeHTML($html, true, false, true, false, '');
 // Close and output PDF
 
 $filePath = '/home/u676389388/domains/pcippnu.com/Data_Pengeluaran_Tahun_' . $tahun . '.pdf';
-$pdf->Output($filePath, 'F');
+$pdf->Output($filePath, 'FI');
 
 // Redirect to the generated PDF file
 echo '<script>window.location.href = "' . $filePath . '";</script>';
