@@ -54,5 +54,5 @@ $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('pdf/Data_Pengeluaran.pdf', 'FI');
+$pdf->Output('./pdf/Data_Pengeluaran.pdf', 'FI');
 ?>
