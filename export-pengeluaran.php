@@ -54,5 +54,5 @@ $html .= '</table>';
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
-$pdf->Output('./pdf/Data_Pengeluaran.pdf', 'FI');
+$pdf->Output('/home/u676389388/domains/pcippnu.com/keuangan_yuni/pdf/Data_Pengeluaran.pdf', 'FI');
 ?>
