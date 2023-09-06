@@ -57,7 +57,6 @@ $pdf->writeHTML($html, true, false, true, false, '');
 
 $filePath = '/home/u676389388/domains/pcippnu.com/keuangan_yuni/Data_Pengeluaran_Tahun_' . $tahun . '.pdf';
 $pdf->Output($filePath, 'F');
-
-// Redirect to the generated PDF file
-echo '<script>window.location.href = "/Data_Pengeluaran_Tahun_' . $tahun . '.pdf";</script>';
+header('Location: /Data_Pengeluaran_Tahun_' . $tahun . '.pdf');
+exit();
 ?>
