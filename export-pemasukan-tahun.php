@@ -59,6 +59,6 @@ $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
 $pdf->Output('/home/u676389388/domains/pcippnu.com/keuangan_yuni/Data_Pemasukan_Tahun_' . $tahun . '.pdf', 'F');
-header('Location: /keuangan_yuni/Data_Pemasukan_Tahun_' . $tahun . '.pdf');
+header('Location: /Data_Pemasukan_Tahun_' . $tahun . '.pdf');
 exit();
 ?>
