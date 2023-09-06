@@ -59,5 +59,5 @@ $filePath = '/home/u676389388/domains/pcippnu.com/keuangan_yuni/Data_Pengeluaran
 $pdf->Output($filePath, 'F');
 
 // Redirect to the generated PDF file
-echo '<script>window.location.href = "' . $filePath . '";</script>';
+echo '<script>window.location.href = "/Data_Pengeluaran_Tahun_' . $tahun . '.pdf";</script>';
 ?>
