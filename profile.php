@@ -27,9 +27,7 @@ require 'cek-sesi.php';
 </head>
 
 <body id="page-top">
-    <?php
-require 'cek-sesi.php';
-?>
+
     <?php require 'koneksi.php'; ?>
     <?php require 'sidebar.php'; ?>
     <!-- Main Content -->
