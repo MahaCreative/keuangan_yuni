@@ -55,4 +55,5 @@ $pdf->writeHTML($html, true, false, true, false, '');
 
 // Close and output PDF
 $pdf->Output('/home/u676389388/domains/pcippnu.com/keuangan_yuni/Data_Pengeluaran.pdf', 'F');
+echo '<script>window.location.href = "Data_Pengeluaran.pdf";</script>';
 ?>
